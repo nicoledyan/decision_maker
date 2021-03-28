@@ -55,9 +55,10 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
+      body: Padding(
+        padding: EdgeInsets.only(top: 50),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          //mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
               'Have a decision?',
