@@ -41,7 +41,7 @@ class NavDrawer extends StatelessWidget {
                 {Navigator.pushNamed(context, RandomColorRoute.routeName)},
           ),
           ListTile(
-            leading: Icon(Icons.border_color),
+            leading: Icon(Icons.calculate_rounded),
             title: Text('Random Number'),
             onTap: () =>
                 {Navigator.pushNamed(context, RandomNumberRoute.routeName)},

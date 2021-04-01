@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
           new RandomNumberRoute(title: "Random Number"),
     };
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Decision Maker',
       theme: ThemeData(
         primarySwatch: Colors.teal,
@@ -57,83 +58,84 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Padding(
         padding: EdgeInsets.only(top: 50),
-        child: Column(
-          //mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Have a decision?',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 8.0),
-              child: SizedBox(
-                width: 500,
-                height: 50,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, YesNoRoute.routeName);
-                  },
-                  style: ElevatedButton.styleFrom(
-                      primary: Colors.teal,
-                      onPrimary: Colors.white,
-                      shadowColor: Colors.red,
-                      elevation: 5,
-                      textStyle: TextStyle(
-                        fontSize: 20,
-                      )),
-                  child: Text(
-                    "Yes or No Question",
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              Text(
+                'Have a decision?',
+                style: Theme.of(context).textTheme.headline4,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0),
+                child: SizedBox(
+                  width: 500,
+                  height: 50,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, YesNoRoute.routeName);
+                    },
+                    style: ElevatedButton.styleFrom(
+                        primary: Colors.teal,
+                        onPrimary: Colors.white,
+                        shadowColor: Colors.red,
+                        elevation: 5,
+                        textStyle: TextStyle(
+                          fontSize: 20,
+                        )),
+                    child: Text(
+                      "Yes or No Question",
+                    ),
                   ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 8.0),
-              child: SizedBox(
-                width: 500,
-                height: 50,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, RandomColorRoute.routeName);
-                  },
-                  style: ElevatedButton.styleFrom(
-                      primary: Colors.teal,
-                      onPrimary: Colors.white,
-                      shadowColor: Colors.red,
-                      elevation: 5,
-                      textStyle: TextStyle(
-                        fontSize: 20,
-                      )),
-                  child: Text(
-                    "Random Color",
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0),
+                child: SizedBox(
+                  width: 500,
+                  height: 50,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, RandomColorRoute.routeName);
+                    },
+                    style: ElevatedButton.styleFrom(
+                        primary: Colors.teal,
+                        onPrimary: Colors.white,
+                        shadowColor: Colors.red,
+                        elevation: 5,
+                        textStyle: TextStyle(
+                          fontSize: 20,
+                        )),
+                    child: Text(
+                      "Random Color",
+                    ),
                   ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 8.0),
-              child: SizedBox(
-                width: 500,
-                height: 50,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, RandomNumberRoute.routeName);
-                  },
-                  style: ElevatedButton.styleFrom(
-                      primary: Colors.teal,
-                      onPrimary: Colors.white,
-                      shadowColor: Colors.red,
-                      elevation: 5,
-                      textStyle: TextStyle(
-                        fontSize: 20,
-                      )),
-                  child: Text(
-                    "Random Number",
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0),
+                child: SizedBox(
+                  width: 500,
+                  height: 50,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, RandomNumberRoute.routeName);
+                    },
+                    style: ElevatedButton.styleFrom(
+                        primary: Colors.teal,
+                        onPrimary: Colors.white,
+                        shadowColor: Colors.red,
+                        elevation: 5,
+                        textStyle: TextStyle(
+                          fontSize: 20,
+                        )),
+                    child: Text(
+                      "Random Number",
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
